@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の取得と内容の変更</title>
+    <style>
+        #ck{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+  <h1>座席の予約</h1>
+  <p>東京会場<div id="ck">予約受付中</div></p>  
+  <strong id="ty"><button onclick="ch();"></button></strong>
+
+  <script>
+    function check(){
+         let checkON =document.getElementById('ck').textContent = '予約済み';
+         let thanks =document.getElementById('ty').textContent = 'ありがとうございました。';
+    }
+  </script>
+</body>
+</html>
