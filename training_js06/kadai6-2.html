@@ -12,13 +12,15 @@
 </head>
 <body>
   <h1>座席の予約</h1>
-  <p>東京会場<div id="ck">(予約受付中)</div></p>  
-  <button onclick="ch();"></button>
+  <p>東京会場<span id="ck">(予約受付中)</span></p>  
+  <strong id="ty"><button onclick="ch();">予約する</button></strong>
 
   <script>
-    function check(){
-         let checkON =document.getElementById('ck').textContent = '予約済み';
-         let thanks =document.getElementById('ty').textContent = 'ありがとうございました。';
+    function ch(){
+         let checkON =document.getElementById('ck'); 
+         checkON.innerHTML= '(予約済み)';
+         let thanks =document.getElementById('ty');
+         thanks.innerHTML = 'ありがとうございました。';
     }
   </script>
 </body>
