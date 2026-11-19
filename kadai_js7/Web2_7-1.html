@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>7-1</title>
 </head>
 <body>
-    
+    <h2>今の時間の挨拶</h2>
+    <button onclick="ans();">挨拶</button>
+    <p id = anser>回答欄</p>
     <script>
         function greetings(){
-        const today = new date()
-        const hour = now.getHours()
+        const today = new Date()
+        const hour = today.getHours()
         if(hour >= 5 && hour < 9)return "おはようございます"
-        else if(hour >= 18) return "こんにちは"
+        else if(hour >= 18) return "こんばんは"
         else return "こんにちは"
+        }
 
+        function ans(){
+            let box = greetings();
+             let aisatu = document.getElementById('anser').textContent = box;
         }
     </script>
 </body>
