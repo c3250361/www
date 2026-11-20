@@ -6,6 +6,11 @@
     <title>7-3</title>
 </head>
 <body>
+    <h1>演算子の利用</h1>
+    <h2>10○10=?<p>"○に入る演算子を「+,-,*,/」から入力してください。</p></h2>
+    <input type="text" id="math">
+    <button onclick="butt();">送信</button>
+    <p id = "anser"></p>
     
     <script>
         function calculateResult(op1,op2,operator){
@@ -15,19 +20,24 @@
                     result = op1 + op2
                     break
                 case "-":
-                    result = op1 + op2
+                    result = op1 - op2
                     break
                 case "*":
-                    result = op1 + op2
+                    result = op1 * op2
                     break
                 case "/":
-                    result = op1 + op2
+                    result = op1 / op2
                     break
                 default:
                     throw new SyntaxError(
                         "演算子は「+,-,*,/」の中から選んでください")
             }
             return result
+        }
+
+        function butt(){
+            let a = document.getElementById('math').value;
+            let anserbox = document.getElementById('anser').textContent = calculateResult(10,10,a); 
         }
     </script>
 </body>
