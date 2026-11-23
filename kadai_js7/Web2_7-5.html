@@ -7,5 +7,31 @@
 </head>
 <body>
     
+    <script>
+        function sum(a,b){
+            return a + b
+        }
+        const sum = (a,b) => a + b
+
+        function fibo(n){
+            if (n < 2){
+                return n
+            }
+            return fibo(n - 1) + fibo(n - 2)
+        }
+        const fibo = (n) => n < 2 ? n : fibo(n - 1) + fibo(n - 2)
+
+        function betweenOrBoound(low,high,n){
+            return n < low ? low : (n > high ? high : n)
+        }
+        const betweenOrBoound = (low,high,n) =>{
+            if(n >= low && n <= high)
+                return n
+            else if(n < low)
+                return low
+            else
+                return high
+        }
+    </script>
 </body>
 </html>
