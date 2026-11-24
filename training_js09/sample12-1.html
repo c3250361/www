@@ -6,6 +6,17 @@
     <title>繰り返し処理</title>
 </head>
 <body>
-    
+    <h1>整数の合計</h1>
+    <p>ボタンをクリックすると、1~100を合計した結果を表示します。</p>
+    <button onclick="add100();"></button>
+    <script>
+        function add100(){
+            let anser = 0;
+        for(let i = 1;i <= 100;i++){
+            anser = anser + i;
+        }
+        alert('1~100を合計すると'+ anser +'になります。');
+    }
+    </script>
 </body>
 </html>
