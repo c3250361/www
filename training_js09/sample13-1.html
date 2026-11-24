@@ -32,7 +32,7 @@
         function createtable(){
 
             //---------------ヘッダー行の作成--------------
-            let row = ' <tr><th></th>';
+            let row = '<tr><th></th>';
             for(let j=1;j <= 9;j++){
                 row = row + '<th>' + j + '</th>' ;  
              }
@@ -42,7 +42,7 @@
 
             //---------------データ部分の作成---------------
             for(let i=1;i <= 9;i++){
-                let row = row + '<tr><th>' + j + '</th>' ; 
+                let row = row + '<tr><th>' + i + '</th>' ; 
                     for(let j=1;j <= 9;j++){
                         row = row + '<td>' + i * j + '</td>';
                     }
