@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-2</title>
+    <title>要素の追加と削除</title>
 </head>
 <body>
-
+<h1>写真の一覧</h1>
+<p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+<button id="bu" onclick="picuture();">写真を表示</button>
     <script>
-        function ask(question,yes,no){
-            if(confirm(question)) yes()
-            else no()
+        let list = ['<img src="photo_1.jpg">','<img src="photo_2.jpg">','<img src="photo_3.jpg">'];
+        function picuture(){
+            let place = document.getElementById('p');
+            place.insertAdjacentHTML('beforeend','<img src="photo_1.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_2.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_3.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_4.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_5.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_6.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_7.jpg">');
+            place.insertAdjacentHTML('beforeend','<img src="photo_8.jpg">');
+            document.getElementById('bu').remove();
         }
-
-        ask(
-            "次の操作を始めてもいい？",
-            function(){alert("移動する！")},
-            function(){alert("このページに留まる")}
-        )
     </script>
+    
 </body>
 </html>
