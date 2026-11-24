@@ -7,12 +7,12 @@
 </head>
 <body>
 <h1>写真の一覧</h1>
-<p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+<p id="sentence">以下のボタンをクリックすると、写真が一覧表示されます。</p>
 <button id="bu" onclick="picuture();">写真を表示</button>
     <script>
         let list = ['<img src="photo_1.jpg">','<img src="photo_2.jpg">','<img src="photo_3.jpg">'];
         function picuture(){
-            let place = document.getElementById('p');
+            let place = document.getElementById('setence');
             place.insertAdjacentHTML('beforeend','<img src="photo_1.jpg">');
             place.insertAdjacentHTML('beforeend','<img src="photo_2.jpg">');
             place.insertAdjacentHTML('beforeend','<img src="photo_3.jpg">');
