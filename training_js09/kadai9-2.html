@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックカウント</title>
+</head>
+<body>
+    <h1>Click Counter</h1><br>
+    <button onclick="A();">クリック</button>
+    <p id="anserbox"></p>
+    <script>
+          let click = 0;
+          let place = document.getElementById('anserbox');
+        function A(){
+          click = click + 1;
+        place.textContent = '';
+        let star = '';
+        let num = 0;
+        switch(click){
+            case 1:
+             for(let i = 1;i <= 1;i++){
+                star = star + '★';
+            }
+            place.textContent = star;
+            break
+            case 2: 
+            for(let i = 1;i <= 5;i++){
+                star = star + '★';
+            }
+             place.textContent = star;
+            break
+            case 3:
+             for(let i = 1;i <= 5;i++){
+                star = star + i +',';
+            }
+             place.textContent = star;
+            break
+            case 4:
+             for(let i = 2;i <= 10;i = i+2){
+                 star = star + i +',';
+            }
+             place.textContent = star;
+            break
+            case 5:
+            for(let i = 1;i <= 5;i++){
+                  num = num + i;
+            }
+             place.textContent = num;
+            break
+            default:
+            star = 'クリアしました。カウントを0に戻します。'
+            click = 0;
+             place.textContent = star;
+        }
+       
+        }
+    </script>
+</body>
+</html>
