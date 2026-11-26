@@ -9,11 +9,18 @@
    <h1>Click Counter★swich構文</h1>
     <p>ボタンをクリックすると、クリック回数に応じて結果が変わります。</p>
     <p>JavaScriptのswich構文を使って処理を作ってみましょう。</p>
+    <p>クリック回数<span id="clickcount"></span>回</p>
     <button onclick="A();">クリック</button>
     <p id="anserbox"></p>
     <script>
           let click = 0;
           let place = document.getElementById('anserbox');
+          let counter = document.getElementById('clickcount');
+        
+          function clctr(){
+
+          }
+
         function A(){
           click = click + 1;
         place.textContent = '';
@@ -55,9 +62,8 @@
             click = 0;
              place.textContent = star;
         }
-       
+         counter.textContent = click;
         }
     </script>
 </body>
 </html>
->>>>>>> 20a3926300d50a834404feb1c769aa8a0a98a91e
