@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クリックカウント</title>
+    <style>
+        #wrap{
+            padding: auto;
+            
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -19,7 +25,7 @@
           let click = 0;
           let place = document.getElementById('anserbox');
           let counter = document.getElementById('clickcount');
-        
+          counter.textContent = click;
 
         function A(){
           click = click + 1;
